@@ -14,7 +14,9 @@
     <header>   
         <nav id="nav34">
             <div class="desktop fr">
+                               
               <div class="logo">
+                <div id="welcomeMessage" style="display:none;"></div>
                 <h1 id="logoo">Vestiré</h1>
                 </div>
               <div class="secondary-full">
@@ -29,11 +31,17 @@
     <div class="containerAqui">
          <div class="TiName"> 
              <div class="textoTiName">
-               <h2 id="Nombre"></h2>
-               <h2 id="Aqui"></h2>
-               <h3 id="Alla"></h3>
+                <form id="registerForm">
+                    <input type="text" id="username" placeholder="Nombre de usuario" required>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <button type="submit">Registrar</button>
+                  </form>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Nombre de usuario" required>
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar sesión</button>
+                </form>  
                <h2 class="Newform">Descubre lo nuevo en <strong>Vestiré</strong></h2>
-               <h3 id="Agradezco"></h3>
              </div>
          </div>
          <div class="Shopping" id="contenedorProductos">
