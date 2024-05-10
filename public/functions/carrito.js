@@ -1,5 +1,6 @@
 //              --- >>> CREACION CARRITO DE COMPRAS <<< --- 
 
+<<<<<<< HEAD
 // Definición de la CLASE Producto
 class Producto {
     constructor(id, nombre, precio, imagen) {
@@ -10,6 +11,20 @@ class Producto {
     }
 }
 
+=======
+//              --- >>> CREACION CARRITO DE COMPRAS <<< --- 
+
+// Definición de la CLASE Producto
+class Producto {
+    constructor(id, nombre, precio, imagen) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.imagen = imagen;
+    }
+}
+
+>>>>>>> b2aa398bfbfe81474dc6fe42df661af773032acb
 //  --- FUNCIONES ---
 // Agrega productos al carrito o incrementa su cantidad
 function agregarAlCarrito(producto) {
@@ -105,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCart();
     });
 });
+<<<<<<< HEAD
 
 
 // --------------------- Formulario de Registro
@@ -144,3 +160,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
   
+=======
+>>>>>>> b2aa398bfbfe81474dc6fe42df661af773032acb
