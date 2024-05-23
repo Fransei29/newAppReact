@@ -6,7 +6,7 @@ const { Pool } = require('pg') // Importar el objeto 'Pool' de Postgres (Base de
 require('dotenv').config(); //Importar y cargar las variables de entorno desde el archivo .env
 const bodyParser = require('body-parser');
 
-// Sirve archivos estáticos desde la carpeta 'public'.
+// Sirve archivos estáticos desde la carpeta 'public'!!
 app.use(express.static('public'));  
  // Integrar el middleware a la app para el manejo de cookies 
 app.use(cookieParser())
