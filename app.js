@@ -6,7 +6,6 @@ require('dotenv').config(); //Importar y cargar las variables de entorno desde e
 const bodyParser = require('body-parser');
 const { Sequelize, Model, DataTypes } = require('sequelize')
 
-
 const sequelize = new Sequelize(process.env.DATABASE, process.env.USER, process.env.PASSWORD, {
     host: process.env.HOST,
     port: process.env.DB_PORT || 5432,

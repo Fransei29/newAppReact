@@ -1,6 +1,5 @@
-//              --- >>> CREACION CARRITO DE COMPRAS <<< --- 
-
 // Definición de la CLASE Producto
+// Esta clase representa un producto en la tienda con su id, nombre, precio e imagen.
 class Producto {
     constructor(id, nombre, precio, imagen) {
         this.id = id;
@@ -10,8 +9,24 @@ class Producto {
     }
 }
 
-//  --- FUNCIONES ---
-// Agrega productos al carrito o incrementa su cantidad
+// Lista de productos usando la nueva clase Producto
+// Este array contiene la lista de productos disponibles en la tienda.
+const productos = [
+    new Producto(1, 'Zapatilla', 50, 'zapatilla'),
+    new Producto(2, 'Ojota', 20, 'ojota'),
+    new Producto(3, 'Pantalon', 30, 'pantalones_1203-8308.jpg'),
+    new Producto(4, 'Remera', 30, 'remera'),
+    new Producto(5, 'Campera', 50, 'campera'),
+    new Producto(6, 'Lentes', 40, 'lentes')
+];
+
+// Variables globales
+// Esta variable contiene el carrito de compras del usuario.
+let cart = [];
+
+// Funciones para manejar el carrito
+
+// Agrega productos al carrito o incrementa su cantidad si ya está en el carrito.
 function agregarAlCarrito(producto) {
     const productoExistente = cart.find(p => p.id === producto.id);
     if (productoExistente) {
@@ -23,7 +38,7 @@ function agregarAlCarrito(producto) {
     updateCart();
 }
 
-// Renderiza los productos en el HTML
+// Renderiza los productos en el contenedor HTML.
 function agregarProductosAlHTML() {
     const contenedorProductos = document.getElementById('productos-container');
     productos.forEach((producto, index) => {
@@ -39,7 +54,6 @@ function agregarProductosAlHTML() {
     });
 }
 
-// Agrega eventos a los botones de agregar al carrito
 function agregarEventosDeCarrito() {
     productos.forEach((producto) => {
         const boton = document.getElementById(`addToCart${producto.id}`);
@@ -47,7 +61,6 @@ function agregarEventosDeCarrito() {
     });
 }
 
-// Actualiza el carrito en el DOM
 function updateCart() {
     const cartElement = document.getElementById('cartItems');
     cartElement.innerHTML = '';
@@ -62,12 +75,10 @@ function updateCart() {
     totalPriceElement.textContent = `Total: $${totalPrice}`;
 }
 
-// Guarda el carrito en localStorage
 function actualizarLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(cart));
 }
 
-// Carga el carrito desde localStorage
 function cargarCarritoDeLocalStorage() {
     const carritoGuardado = localStorage.getItem('carrito');
     if (carritoGuardado) {
@@ -76,87 +87,13 @@ function cargarCarritoDeLocalStorage() {
     }
 }
 
-
-
-// Inicialización del programa
-// Lista de productos usando la nueva clase Producto
-const productos = [
-    new Producto(1, 'Zapatilla', 50, 'zapatilla'),
-    new Producto(2, 'Ojota', 20, 'ojota'),
-    new Producto(3, 'Pantalon', 30, 'pantalones_1203-8308.jpg'),
-    new Producto(4, 'Remera', 30, 'remera'),
-    new Producto(5, 'Campera', 50, 'campera'),
-    new Producto(6, 'Lentes', 40, 'lentes')
-];
-
-// Variables y funciones globales
-let cart = [];
-
-// Inicialización del DOM y programa
-document.addEventListener('DOMContentLoaded', function() {
-    cargarCarritoDeLocalStorage();
-    agregarProductosAlHTML();
-    agregarEventosDeCarrito();
-    document.getElementById('comprar-btn').addEventListener('click', async function() {
-        console.log('Usted ha comprado: ', cart);
-
-        try {
-            const response = await fetch('/comprar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ cart })
-            });
-
-            if (response.ok) {
-                alert('¡Compra realizada! Revisa la consola para ver los detalles.');
-                cart = [];
-                actualizarLocalStorage();
-                updateCart();
-            } else {
-                alert('Hubo un problema al procesar la compra.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Hubo un error al conectarse con el servidor.');
-        }
-    });
-});
-
-// --------------------- Formulario de Registro
-
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-  
-    // Guardar el usuario en local storage
-    localStorage.setItem(username, JSON.stringify({password: password}));
-    document.getElementById('registerForm').style.display = 'none';
-    document.getElementById('loginForm').style.display = 'none';
-  
-    alert('Usuario registrado con éxito!');
-});
-
-// --------------------- Formulario de Inicio de Sesion
-
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
-
-    // Verificar usuario y contraseña
-    const storedUser = JSON.parse(localStorage.getItem(username));
-    if (storedUser && storedUser.password === password) {
-        alert('Inicio de sesión exitoso!');
-        document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('registerForm').style.display = 'none';
-         // Muestra un mensaje de bienvenida o cambia el contenido
-        const welcomeMsg = document.getElementById('welcomeMessage');
-        welcomeMsg.style.display = 'block';  // Muestra el mensaje
-        welcomeMsg.textContent = 'Bienvenido, ' + username + '!';
-    } else {
-        alert('Usuario o contraseña incorrectos.');
-    }
-});
+export {
+    productos,
+    cart,
+    agregarAlCarrito,
+    agregarProductosAlHTML,
+    agregarEventosDeCarrito,
+    updateCart,
+    actualizarLocalStorage,
+    cargarCarritoDeLocalStorage
+};
