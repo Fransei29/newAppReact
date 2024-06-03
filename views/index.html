@@ -34,23 +34,25 @@
                 <form id="registerForm">
                     <input type="text" id="username" placeholder="Nombre de usuario" required>
                     <input type="password" id="password" placeholder="Contraseña" required>
-                    <button type="submit">Registrar</button>
+                    <button type="submit">Registrarse</button>
                   </form>
                 <form id="loginForm">
                     <input type="text" id="loginUsername" placeholder="Nombre de usuario" required>
                     <input type="password" id="loginPassword" placeholder="Contraseña" required>
                     <button type="submit">Iniciar sesión</button>
                 </form>  
-               <h2 class="Newform">Descubre lo nuevo en <strong>Vestiré</strong></h2>
+             </div>
+             <div>
+              <h2 class="Newform">Descubre lo nuevo en <strong>Vestiré</strong></h2>
              </div>
          </div>
          <div class="Shopping" id="contenedorProductos">
                  <div id="productos-container"></div>
                  <div class="Carrito">
                       <div id="cart">
-                          <h2 class="titleCarro">Carrito de compras</h2>
+                          <h2 class="titleCarro">Carrito de compras  <i class="fa-solid fa-cart-shopping"></i></h2>                          
                           <ul id="cartItems"></ul>
-                          <p id="totalPrice">Total: $0</p>
+                          <p id="totalPrice"></p>
                           <button id="comprar-btn">Comprar</button>
                       </div>
                  </div>
@@ -59,7 +61,8 @@
             <h2>Acerca de Nosostros</h2>
             <p class="textoAbout">Ubicados en el corazón de Villa del Rosario, frente a la emblemática plaza del pueblo, nuestra tienda de ropa ha sido un punto de encuentro para la moda y la comunidad local desde hace varias décadas. Con un compromiso arraigado en ofrecer calidad y estilo, nos enorgullece ser una parte integral del tejido social de nuestra ciudad, proporcionando a nuestros clientes piezas que les encantan y en las que confían. Visítanos para descubrir colecciones que combinan tradición y tendencias actuales, todo ello en el ambiente más acogedor de Villa del Rosario.</p>
          </div>
-         <div class="ImgBack"></div>       
+         <div class="ImgBack">
+         </div>       
          <div class="Send">
              <div class="containerSend">
                  <div class="FirstPart">
@@ -68,32 +71,28 @@
                      <p>Si prefieres recoger tu pedido personalmente, ofrecemos la opción de recogida en tienda directamente en nuestra ubicación frente a la plaza de Villa del Rosario.</p>
                  </div>
              </div>
-             <div class="SecondPart">
-             </div>
            </div>
-         <div class="Locat">
-             <div class="ContainerLocat">
-                 <div class="pictureCont">
-                     <img class="picNi" src="./img/nuevaaqui.jpg" alt="">
-                 </div>
-                 <div class="infoCont">
-                         <h2 class="Pat">Visítanos en nuestra tienda ubicada justo frente a la histórica plaza de Villa del Rosario. Estamos abiertos todos los días de la semana, desde las 9:00 hasta las 18:00 horas. Si tienes dudas sobre cómo llegar, no dudes en llamarnos o enviarnos un mensaje. ¡Estamos aquí para ayudarte a encontrar el mejor estilo para ti!</h2>
-                         <ul>
-                             <li>Situada en un punto céntrico, ideal para disfrutar de un día de compras mientras paseas por la encantadora plaza de Villa del Rosario.</li>
-                             <li>Horario amplio de atención para que puedas visitarnos en el momento que más te convenga, de lunes a domingo.</li>
-                             <li>Equipo experto y amable que está siempre disponible para asesorarte y ayudarte a encontrar exactamente lo que necesitas.</li>
-                         </ul>
-                 </div>
-             </div>    
-         </div>  
          <div class="Pie">
-            <p>© 2024 Villa del Rosario Moda. Todos los derechos reservados.</p>
-            <p style="margin-left: auto; padding-right: 20px;">Síguenos en nuestras redes sociales</p>
-         </div>
+            <div>
+              <p>Síguenos en nuestras redes sociales </p>
+            </div>
+            <div class="divicon">
+              <ul class="icon">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-whatsapp"></i></li>
+              </ul>
+            </div>
+            <div>
+              <p>© 2024 Villa del Rosario Moda. Todos los derechos reservados.</p>
+            </div>
+          </div>
     </div>
 </div>
-<script type="module" src="functions/main.js"></script>
-<script type="module" src="functions/auth.js"></script>
-<script type="module" src="functions/cart.js"></script>
+<script src="https://kit.fontawesome.com/1dab20721f.js" crossorigin="anonymous"></script>
+<script src="/public/functions/auth.js"></script>
+<script src="/public/functions/main.js"></script>
+<script src="/public/functions/cart.js"></script>
+<script src="functions/carrito.js"></script>
 </body>
 </html>

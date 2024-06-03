@@ -11,5 +11,9 @@
     "psql": "^0.0.1",
     "sequelize": "^6.37.3",
     "session": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "standard": "^17.1.0"
   }
 }
