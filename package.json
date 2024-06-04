@@ -1,19 +1,28 @@
 {
+  "name": "tu-app",
+  "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "node": "^22.1.0",
-    "pg": "^8.11.5",
-    "psql": "^0.0.1",
-    "sequelize": "^6.37.3",
-    "session": "^0.1.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.0"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "eslint": "^8.57.0",
-    "standard": "^17.1.0"
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.2.0"
   }
 }

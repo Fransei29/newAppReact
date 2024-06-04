@@ -1,8 +1,8 @@
 {
-    "extends": ["standard"],
-    "env": {
-      "browser": true,
-      "node": true
-    }
+  "extends": ["standard"],
+  "plugins": ["import", "node", "promise"],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
   }
-  
+}
