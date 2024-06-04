@@ -2,22 +2,20 @@
 import React, { useState, useEffect } from "react";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
-
-const initialProducts = [
-  { id: 1, nombre: "Zapatilla", precio: 50, imagen: "zapatilla.jpg" },
-  { id: 2, nombre: "Ojota", precio: 20, imagen: "ojota.jpg" },
-  { id: 3, nombre: "Pantalon", precio: 30, imagen: "pantalones_1203-8308.jpg" },
-  { id: 4, nombre: "Remera", precio: 30, imagen: "remera.jpg" },
-  { id: 5, nombre: "Campera", precio: 50, imagen: "campera.jpg" },
-  { id: 6, nombre: "Lentes", precio: 40, imagen: "lentes.jpg" }
-];
+// import Auth from "./components/Auth";
 
 const App = () => {
-  const [products] = useState(initialProducts);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
+    // Obtener productos de la API simulada
+    fetch("/products.json")
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.error("Error al cargar los productos:", error));
+
     const carritoGuardado = localStorage.getItem("carrito");
     if (carritoGuardado) {
       const parsedCart = JSON.parse(carritoGuardado);
@@ -53,7 +51,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="Ruta">
       <h1>Tienda</h1>
       <ProductList products={products} addToCart={addToCart} />
       <Cart cart={cart} totalPrice={totalPrice} />

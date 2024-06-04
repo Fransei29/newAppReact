@@ -1,0 +1,9 @@
+[
+    { "id": 1, "nombre": "Zapatilla", "precio": 50, "imagen": "zapatilla" },
+    { "id": 2, "nombre": "Ojota", "precio": 20, "imagen": "ojotas" },
+    { "id": 3, "nombre": "Pantalon", "precio": 30, "imagen": "pantalones_1203-8308.jpg" },
+    { "id": 4, "nombre": "Remera", "precio": 30, "imagen": "remera" },
+    { "id": 5, "nombre": "Campera", "precio": 50, "imagen": "campera" },
+    { "id": 6, "nombre": "Lentes", "precio": 40, "imagen": "lentesi" }
+  ]
+  

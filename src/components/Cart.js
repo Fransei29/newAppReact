@@ -2,7 +2,7 @@
 import React from "react";
 
 const Cart = ({ cart, totalPrice }) => (
-  <div>
+  <div classname="ruta">
     <h2 className="titleCarro">Carrito de compras <i className="fa-solid fa-cart-shopping"></i></h2>
     <ul id="cartItems">
       {cart.map((item, index) => (
@@ -12,7 +12,7 @@ const Cart = ({ cart, totalPrice }) => (
       ))}
     </ul>
     <p id="totalPrice">Total: ${totalPrice}</p>
-    <button id="comprar-btn">Comprar</button>
+    {/* <button id="comprar-btn">Comprar</button> */}
   </div>
 );
 
