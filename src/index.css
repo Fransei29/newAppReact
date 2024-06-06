@@ -235,20 +235,26 @@ html, body {
   
   .ali {
   flex: 1; 
-  min-width: 200px; 
+  min-width: 180px; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
   height: 100%;
+  font-size: 13px;
   }
   
+  h3 {
+    padding-top: 5px;
+    font-size: 18px;
+  }
   .ali img {
   width: 100%;
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 170px;
+  max-width: 165px;
   }
   
   .ali:hover {
@@ -273,13 +279,15 @@ html, body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
   }
 
   .titleCarro {
   background-color: rgba(26, 9, 181, 0.1);
   border-radius: 2px;
-  padding: 20px;
+  padding: 15px;
+  margin-top: 20px;
   }
   #totalPrice{
     font-weight: bold;
@@ -350,6 +358,34 @@ html, body {
   }
   
   /* ---- FIN NAVBAR ---- */
+
+    /* ---- CARRUSEL ---- */
+  #productos-container {
+    padding: 10px;
+    background-color: rgba(26, 9, 181, 0.1);
+  }
+  
+  .product-group {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .product {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-control-next, .carousel-control-prev {
+    width: 5%;
+    opacity: 0;
+    color: rgb(253, 253, 0);
+  }
   
   /* --- Configuracion del formulario  */
   form {
@@ -389,11 +425,18 @@ html, body {
   background-color: #2431c0; /* Cambio de color al pasar el mouse */
   }
   
-  .fa-brands:hover {
-    cursor:pointer;
-    transform: scale(1.50);
+  .icon a {
+    color: inherit; /* Hereda el color del contenedor padre */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 2rem;
   }
-  
+  .icon a:hover i {
+    cursor:pointer;
+    transform: scale(1.5);
+  }
+  .icon i {
+    transition: transform 0.1s ease-in-out;
+  }
   
   
   /* Estilos Base para dispositivos móviles */

@@ -2,7 +2,7 @@
 import React from "react";
 
 const Cart = ({ cart, totalPrice }) => (
-  <div classname="ruta">
+  <div className="ruta">
     <h2 className="titleCarro">Carrito de compras <i className="fa-solid fa-cart-shopping"></i></h2>
     <ul id="cartItems">
       {cart.map((item, index) => (

@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
     "concurrently": "^7.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
@@ -11,9 +12,12 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "pg": "^8.11.5",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1",
-    "sequelize": "^6.37.3"
+    "react-slick": "^0.30.2",
+    "sequelize": "^6.37.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
