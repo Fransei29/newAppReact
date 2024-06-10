@@ -1,7 +1,7 @@
 // src/components/Cart.js
 import React from "react";
 
-const Cart = ({ cart, totalPrice }) => (
+const Cart = ({ cart, totalPrice, handlePurchase }) => (
   <div className="ruta">
     <h2 className="titleCarro">Carrito de compras <i className="fa-solid fa-cart-shopping"></i></h2>
     <ul id="cartItems">
@@ -12,7 +12,7 @@ const Cart = ({ cart, totalPrice }) => (
       ))}
     </ul>
     <p id="totalPrice">Total: ${totalPrice}</p>
-    {/* <button id="comprar-btn">Comprar</button> */}
+    {/* <button id="comprar-btn" onClick={handlePurchase}>Comprar</button> */}
   </div>
 );
 

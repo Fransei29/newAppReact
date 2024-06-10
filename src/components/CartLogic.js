@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
+import "../index.css";
 
 const useCart = () => {
   const [cart, setCart] = useState([]);
@@ -37,6 +39,15 @@ const useCart = () => {
 
   const handlePurchase = () => {
     console.log("Usted ha comprado: ", cart);
+    Swal.fire({
+      title: "Felicitaciones!",
+      text: "El producto está en camino",
+      icon: "success",
+      confirmButtonText: "Ok",
+      customClass: {
+        container: "custom-swal"
+      }
+    });
     setCart([]);
     localStorage.removeItem("carrito");
     setTotalPrice(0);

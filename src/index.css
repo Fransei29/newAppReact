@@ -283,6 +283,20 @@ html, body {
     padding-bottom: 25px;
     padding-top: 25px;
   }
+.custom-swal {
+    width: 100% !important; /* Cambia este valor según tus necesidades */
+}
+.custom-swal .swal2-popup {
+  padding: 0 !important; /* Ajusta el padding según sea necesario */
+}
+
+.custom-swal .swal2-title {
+  font-size: 1.5rem !important; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.custom-swal .swal2-content {
+  font-size: 15px !important; /* Ajusta el tamaño de la fuente del contenido */
+}
 
   .titleCarro {
   background-color: rgba(26, 9, 181, 0.1);
