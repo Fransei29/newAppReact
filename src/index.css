@@ -271,6 +271,7 @@ html, body {
   }
   .Ruta {
     display: flex;
+    flex-direction: column;
     background-color:  rgb(208, 211, 34);
     border-top: 15px solid white;
     flex-direction: column;
@@ -294,6 +295,7 @@ html, body {
   }
   #totalPrice, #cartItems{
     display: flex;
+    flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
