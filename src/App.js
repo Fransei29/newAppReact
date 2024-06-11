@@ -1,9 +1,10 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
+import RegisterForm from "./components/RegisterForm";
+import LoginForm from "./components/LoginForm";
 import useCart from "./components/CartLogic";
-// import Auth from "./components/Auth";
+import ReactDOM from "react-dom";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -18,6 +19,12 @@ const App = () => {
       .catch(error => {
         console.error("Error al cargar los productos:", error);
       });
+  }, []);
+
+  useEffect(() => {
+    // Renderiza los formularios en los contenedores adecuados
+    ReactDOM.render(<RegisterForm />, document.getElementById("registerFormContainer"));
+    ReactDOM.render(<LoginForm />, document.getElementById("loginFormContainer"));
   }, []);
 
   return (
